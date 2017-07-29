@@ -30,12 +30,14 @@ public class IndexController {
 	@RequestMapping(value = {"/", "/index.do"}, method = RequestMethod.GET)
 	public ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
 		HttpSession session = request.getSession();
-		ModelAndView mav = new ModelAndView();
+		ModelAndView mav = new ModelAndView("include/cm_message");
 		
 		String userId = (String)session.getAttribute("S_MEMBER_ID");
 		
 		if(CmFuntion.isEmpty(userId)) {
-			mav.setViewName("user/user_login");
+			mav.addObject("message", "로그인 후 이용해 주세요.");
+			mav.addObject("returnUrl", "/user/user_login.do");
+			
 			return mav;
 		}
 		

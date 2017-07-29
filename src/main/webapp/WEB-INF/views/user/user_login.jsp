@@ -18,15 +18,15 @@ body {
 </style>
 </head>
 <body class="valign-wrapper" style="position: relative;">
-	<div class="row z-depth-3" style="position:relative; margin-top: -30px; border: 6px solid #ccc; padding: 30px; border-radius: 10px;">
+	<div class="row z-depth-3" style="position:relative; margin-top: -20px; border: 6px solid #ccc; padding: 30px; border-radius: 10px;">
 		<div class="row" style="margin-bottom: 100px; margin-left: 25px;">
 			<h3 class="col s8 offset-s2">개발중입니다</h3>
 		</div>
 	    <form id="loginForm" name="loginForm" style="width: 520px; margin-top: -30px;">
 		    <div class="row">
 		        <div class="input-field col s12 m12 l12">
-		          <input id="member_id" name="member_id" type="email" class="validate">
-		          <label for="member_id">이메일주소</label>
+		          <input id="member_id" name="member_id" type="text" class="validate">
+		          <label for="member_id">아이디</label>
 		        </div>
 		      </div>
 		      <div class="row">
@@ -92,8 +92,10 @@ body {
 				alert('로그아웃 도중 문제가 발생하였습니다.');
 			}
 		});
-		
 	}
-	
+
+	function moveJoinPage() {
+		location.href = "/user/user_join.do";
+	}
 </script>
 </html>
