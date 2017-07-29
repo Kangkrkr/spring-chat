@@ -33,4 +33,27 @@
 		WHERE MEMBER_ID = #{member_id}
 	</select>
 	
+	<insert id="insertUser" parameterType="UserDto">
+		INSERT INTO MEMBER (
+			MEMBER_NO,
+			MEMBER_ID,
+			MEMBER_PW,
+			MEMBER_NAME,
+			MEMBER_MOBILE,
+			MEMBER_ADDR,
+			MEMBER_CHANNEL,
+			MEMBER_AUTH,
+			MEMBER_EXIT
+		) VALUES (
+			MEMBER_SEQ.NEXTVAL,
+			#{member_id},
+			#{member_pw},
+			#{member_name},
+			#{member_mobile},
+			#{member_addr},
+			#{member_channel},
+			#{member_auth},
+			#{member_exit}
+		)
+	</insert>
 </mapper>

@@ -11,4 +11,6 @@ public interface UserDao {
 	public UserDto getUser(UserDto user);
 	
 	public UserDto getUserById(String userId);
+	
+	public void insertUser(UserDto user);
 }

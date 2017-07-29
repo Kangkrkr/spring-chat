@@ -12,4 +12,6 @@ public interface UserService {
 	
 	public UserDto getUserById(String userId);
 	
+	public void insertUser(UserDto user);
+	
 }
