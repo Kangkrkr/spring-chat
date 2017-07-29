@@ -3,7 +3,34 @@
 <mapper namespace="User">
 
 	<select id="getAllUser" resultType="UserDto">
-		SELECT * FROM EMP
+		SELECT * FROM MEMBER
+	</select>
+	
+	<select id="getUser" parameterType="UserDto" resultType="UserDto">
+		SELECT 
+			MEMBER_NO,
+			MEMBER_ID,
+			MEMBER_NAME,
+			MEMBER_ADDR,
+			MEMBER_MOBILE,
+			MEMBER_CHANNEL,
+			MEMBER_AUTH
+		FROM MEMBER
+		WHERE MEMBER_ID = #{member_id}
+		AND   MEMBER_PW = #{member_pw}
+	</select>
+	
+	<select id="getUserById" parameterType="string" resultType="UserDto">
+		SELECT 
+			MEMBER_NO,
+			MEMBER_ID,
+			MEMBER_NAME,
+			MEMBER_ADDR,
+			MEMBER_MOBILE,
+			MEMBER_CHANNEL,
+			MEMBER_AUTH
+		FROM MEMBER
+		WHERE MEMBER_ID = #{member_id}
 	</select>
 	
 </mapper>

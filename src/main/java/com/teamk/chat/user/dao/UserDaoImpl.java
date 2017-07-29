@@ -19,4 +19,14 @@ public class UserDaoImpl implements UserDao {
 		return sqlSession.selectList("User.getAllUser");
 	}
 
+	@Override
+	public UserDto getUser(UserDto user) {
+		return sqlSession.selectOne("User.getUser", user);
+	}
+
+	@Override
+	public UserDto getUserById(String userId) {
+		return sqlSession.selectOne("User.getUserById", userId);
+	}
+
 }

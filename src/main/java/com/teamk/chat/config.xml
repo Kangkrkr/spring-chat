@@ -3,5 +3,8 @@
 <configuration>
 	<typeAliases>
 		<typeAlias alias="UserDto" type="com.teamk.chat.user.dto.UserDto"/>
+		<typeAlias alias="int" type="java.lang.Integer"/>
+		<typeAlias alias="long" type="java.lang.Long"/>
+		<typeAlias alias="string" type="java.lang.String"/>
 	</typeAliases>
 </configuration>

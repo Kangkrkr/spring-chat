@@ -8,4 +8,7 @@ public interface UserDao {
 	
 	public List<UserDto> getAllUser();
 	
+	public UserDto getUser(UserDto user);
+	
+	public UserDto getUserById(String userId);
 }
